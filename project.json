@@ -3,6 +3,8 @@
   "description": "Exercise of week 3 at Babel",
   "main": "MainV4.xaml",
   "dependencies": {
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
+    "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.10.3-preview]",
     "UiPath.Mail.Activities": "[1.10.3-preview]",
     "UiPath.System.Activities": "[21.4.0-preview]",

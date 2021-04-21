@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qk9GdX4F6fJZXYO5A05KfPLzQrFNPt9AnBNwrGsh9HheKDXak+VxL5hbegYQN1WgICLqHM7KayTImLFgKzGYbA==",
+  "dgSpecHash": "7uMnQyeVBLEWabHjiSaZH9HdslX4nMnxBTrxbNCT6kos/pCYxgJY1wCa9nQlTFFAtNHaafYEq3wrbewOvI/Kgw==",
   "success": true,
   "projectFilePath": "C:\\Users\\luis.clara.7LCLARAX450G5\\Documents\\UiPath\\Exercicio Semana 3\\Luis_Week3 V4\\.local\\",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\google.apis.gmail.v1\\1.43.0.1859\\google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
+    "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
@@ -60,6 +61,7 @@
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath\\21.4.23.2412\\uipath.21.4.23.2412.nupkg.sha512",
+    "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0\\uipath.database.activities.1.4.0.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.excel.activities\\2.10.3-preview\\uipath.excel.activities.2.10.3-preview.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.mail.activities\\1.10.3-preview\\uipath.mail.activities.1.10.3-preview.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\uipath.ocr.activities.3.0.0.nupkg.sha512",

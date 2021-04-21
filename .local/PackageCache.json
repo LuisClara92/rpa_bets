@@ -141,6 +141,30 @@
         "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.1-preview"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Activities.Extensions",
+        "Version": "2.0.6.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions/2.0.6.9\\lib/Net45/Microsoft.Activities.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
     }
   ],
   "Conflicts": [],
@@ -263,6 +287,11 @@
           "Item2": "[2.10.0, )"
         }
       ]
+    },
+    "Microsoft.Activities.Extensions": {
+      "Id": "Microsoft.Activities.Extensions",
+      "Version": "2.0.6.9",
+      "Dependencies": []
     },
     "Microsoft.AspNet.SignalR.Client": {
       "Id": "Microsoft.AspNet.SignalR.Client",
@@ -760,6 +789,11 @@
       "Version": "21.4.23.2412",
       "Dependencies": []
     },
+    "UiPath.Database.Activities": {
+      "Id": "UiPath.Database.Activities",
+      "Version": "1.4.0",
+      "Dependencies": []
+    },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
       "Version": "2.10.3-preview",
@@ -1072,6 +1106,17 @@
         "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\mailkit\\2.10.0\\lib\\net46\\MailKit.dll"
       ],
       "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\mailkit\\2.10.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Activities.Extensions",
+        "Version": "2.0.6.9"
+      },
+      "Assemblies": [
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.Design.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\lib\\Net45\\Microsoft.Activities.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9"
     },
     {
       "Package": {
@@ -1536,6 +1581,19 @@
         "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath\\21.4.23.2412\\lib\\net45\\UiPath.Interop.dll"
       ],
       "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath\\21.4.23.2412"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.dll",
+        "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\uipath.database.activities\\1.4.0"
     },
     {
       "Package": {
