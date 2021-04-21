@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1009.6,7444.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>994.4,7547.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -53,7 +53,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -88,9 +88,10 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence go to outlook, filter today's emails by subject first, get the list and filter again to search the keyWord and (if exist) save the attachments on a folder with execution date of robot and with sub folders by first letter of keyWord by email." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1004.8,7380" sap2010:WorkflowViewState.IdRef="Sequence_78">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence go to outlook, filter today's emails by subject first, get the list and filter again to search the keyWord and (if exist) save the attachments on a folder with execution date of robot and with sub folders by first letter of keyWord by email." DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1004.8,7482.4" sap2010:WorkflowViewState.IdRef="Sequence_78">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="emailReceiver" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="index" />
@@ -139,13 +140,13 @@
     </Assign>
     <ui:AppendLine DisplayName="Append Line" FileName="[logPath]" sap:VirtualizedContainerService.HintSize="963.2,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_14" Text="[&quot;Start check emails in Inbox.  [&quot;+ dataExecution.ToString(&quot;dd-MMM-yyyy HH:mm:ss&quot;)+&quot;]&quot;]" UseDefaultEncoding="False" />
     <ui:BuildDataTable DataTable="[finalReportDt]" DisplayName="Build Data Table Report" sap:VirtualizedContainerService.HintSize="963.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_9" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Nomenclatura&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Desporto&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Equipa&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Log&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="963.2,5573.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[emails]">
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="963.2,5676" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[emails]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="email" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="For each Email get KeyWord, Email Receiver and Save attachments" sap:VirtualizedContainerService.HintSize="928,5439.2" sap2010:WorkflowViewState.IdRef="Sequence_77">
+          <Sequence DisplayName="For each Email get KeyWord, Email Receiver and Save attachments" sap:VirtualizedContainerService.HintSize="928,5541.6" sap2010:WorkflowViewState.IdRef="Sequence_77">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="localOutputPath" />
               <Variable x:TypeArguments="x:String" Name="keyWord" />
@@ -160,6 +161,8 @@
               <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="keyWords" />
               <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="emailAddress" />
               <Variable x:TypeArguments="x:String" Name="emailSender" />
+              <Variable x:TypeArguments="x:String" Name="fileName" />
+              <Variable x:TypeArguments="x:Int32" Name="affectedRecords" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -250,9 +253,9 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[email.Attachments.Any]" DisplayName="If - check if filtered emails have attachments" sap:VirtualizedContainerService.HintSize="886.4,3556.8" sap2010:WorkflowViewState.IdRef="If_24">
+            <If Condition="[email.Attachments.Any]" DisplayName="If - check if filtered emails have attachments" sap:VirtualizedContainerService.HintSize="886.4,3659.2" sap2010:WorkflowViewState.IdRef="If_24">
               <If.Then>
-                <Sequence DisplayName="Sequence save and count attachments" sap:VirtualizedContainerService.HintSize="467.2,3397.6" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                <Sequence DisplayName="Sequence save and count attachments" sap:VirtualizedContainerService.HintSize="467.2,3500" sap2010:WorkflowViewState.IdRef="Sequence_75">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -267,11 +270,7 @@
                       <InArgument x:TypeArguments="x:Int32">[totalFiles + currentFiles.Count]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Sequence DisplayName="Sequence connect and write on DB" sap:VirtualizedContainerService.HintSize="425.6,757.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Int32" Name="affectedRecords" />
-                      <Variable x:TypeArguments="x:String" Name="fileName" />
-                    </Sequence.Variables>
+                  <Sequence DisplayName="Sequence connect and write on DB" sap:VirtualizedContainerService.HintSize="425.6,860" sap2010:WorkflowViewState.IdRef="Sequence_80">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -288,24 +287,28 @@
                               <InArgument x:TypeArguments="x:String">[email.Sender.Address.ToString]</InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
-                          <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
                             </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[Directory.GetFiles(localOutputPath)(0).Split("\"c).Last.ToString]</InArgument>
+                            </ui:AssignOperation.Value>
                           </ui:AssignOperation>
                         </scg:List>
                       </ui:MultipleAssign.AssignOperations>
                     </ui:MultipleAssign>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[emailSender]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;email: &quot;+emailSender]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;filename: &quot;+ fileName]" />
                     <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_70">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[query]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">["Insert Into emailTable ( EmailSender) values (" +"'"+emailSender+"'"+");"]</InArgument>
+                        <InArgument x:TypeArguments="x:String">["Insert Into emailTable ( EmailSender, KeyWord, ClientEmail, FileName) values (" +"'"+emailSender+"'" + "," + "'" + keyWord + "'" + "," + "'"+ emailReceiver+ "'" + "," + "'"+ fileName + "'"+");"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:DatabaseConnect DatabaseConnection="[dbTest]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.OleDb" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=&quot;C:\Users\luis.clara.7LCLARAX450G5\Documents\UiPath\Exercicio Semana 3\Luis_Week3 V4\testDB.mdb&quot;" />
+                    <ui:DatabaseConnect DatabaseConnection="[dbTest]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.OleDb" ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\luis.clara.7LCLARAX450G5\Documents\UiPath\rpa_bets\testDB.mdb" />
                     <ui:ExecuteNonQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" AffectedRecords="[affectedRecords]" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[dbTest]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="[query]">
                       <ui:ExecuteNonQuery.Parameters>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />

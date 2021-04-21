@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7uMnQyeVBLEWabHjiSaZH9HdslX4nMnxBTrxbNCT6kos/pCYxgJY1wCa9nQlTFFAtNHaafYEq3wrbewOvI/Kgw==",
+  "dgSpecHash": "u2goVYWlY4nzHFlsOy/uFOauvQYQ0TYRuMgBcSY+JSWaNoBRrk89lxTIJ74PVw0PD1KI1KYSfrBmCYI5cCXwGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luis.clara.7LCLARAX450G5\\Documents\\UiPath\\Exercicio Semana 3\\Luis_Week3 V4\\.local\\",
+  "projectFilePath": "C:\\Users\\luis.clara.7LCLARAX450G5\\Documents\\UiPath\\rpa_bets\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\luis.clara.7LCLARAX450G5\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
