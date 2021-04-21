@@ -1,0 +1,14 @@
+Bom dia,
+
+
+Em anexo seguem os ficheiros: 
+    - Txt com Relatório de Logs;
+    - Excell de Relatório com o resultado da compilação de {0} casos e com um total de {1} casos de sucesso.
+
+
+Com os Melhores Cumprimentos,
+
+Luís Clara 
+RPA Developer (Trainee)
+BABEL
+
