@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetRequestSequence" this:GetRequestSequence.in_team="Seeboden" this:GetRequestSequence.in_sport="Futebol" this:GetRequestSequence.in_n_games="60" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetRequestSequence" this:GetRequestSequence.in_team="Barcelona" this:GetRequestSequence.in_sport="Futebol" this:GetRequestSequence.in_n_games="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_team" Type="InArgument(x:String)" />
     <x:Property Name="in_sport" Type="InArgument(x:String)" />
@@ -14,7 +14,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2924.8,5991.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2924.8,6091.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetRequestSequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -85,7 +85,6 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -94,7 +93,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="GetRequestSequence" sap:VirtualizedContainerService.HintSize="2935.2,5926.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetRequestSequence" sap:VirtualizedContainerService.HintSize="2935.2,6026.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="pageExists" />
@@ -146,7 +145,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Try Catch page exist" sap:VirtualizedContainerService.HintSize="2893.6,5600.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch DisplayName="Try Catch page exist" sap:VirtualizedContainerService.HintSize="2893.6,5700.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <TryCatch.Try>
         <ui:UiElementExists DisplayName="Element Exists 'editable text'" Exists="[pageExists]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
           <ui:UiElementExists.Target>
@@ -182,7 +181,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Sequence check browser window" sap:VirtualizedContainerService.HintSize="2856.8,5369.6" sap2010:WorkflowViewState.IdRef="Sequence_53">
+        <Sequence DisplayName="Sequence check browser window" sap:VirtualizedContainerService.HintSize="2856.8,5469.6" sap2010:WorkflowViewState.IdRef="Sequence_53">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -242,13 +241,13 @@
               </ui:BrowserScope>
             </If.Else>
           </If>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'FlashScor Page'" sap:VirtualizedContainerService.HintSize="2815.2,4668" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="7e9dd7d806fd363479de8fcdb860988a" Selector="&lt;html app='chrome.exe' url='https://www.flashscore.pt/*' /&gt;">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'FlashScor Page'" sap:VirtualizedContainerService.HintSize="2815.2,4768" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="7e9dd7d806fd363479de8fcdb860988a" Selector="&lt;html app='chrome.exe' url='https://www.flashscore.pt/*' /&gt;">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Sequence browser search" sap:VirtualizedContainerService.HintSize="2781.6,4520.8" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                <Sequence DisplayName="Sequence browser search" sap:VirtualizedContainerService.HintSize="2781.6,4620.8" sap2010:WorkflowViewState.IdRef="Sequence_64">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -280,7 +279,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <TryCatch DisplayName="Try Catch sport" sap:VirtualizedContainerService.HintSize="2740,4008.8" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                  <TryCatch DisplayName="Try Catch sport" sap:VirtualizedContainerService.HintSize="2740,4108.8" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                     <TryCatch.Variables>
                       <Variable x:TypeArguments="s:String[]" Default="[{&quot;futebol&quot;,&quot;basquetebol&quot;,&quot;hóquei&quot;}]" Name="sportsArray" />
                       <Variable x:TypeArguments="x:Boolean" Name="sportExists" />
@@ -373,9 +372,9 @@
                       </Catch>
                     </TryCatch.Catches>
                     <TryCatch.Finally>
-                      <If Condition="[sportsArray.Contains(in_sport.ToLower)]" sap:VirtualizedContainerService.HintSize="2703.2,3777.6" sap2010:WorkflowViewState.IdRef="If_36">
+                      <If Condition="[sportsArray.Contains(in_sport.ToLower)]" sap:VirtualizedContainerService.HintSize="2703.2,3877.6" sap2010:WorkflowViewState.IdRef="If_36">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="2396.8,3618.4" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                          <Sequence sap:VirtualizedContainerService.HintSize="2396.8,3718.4" sap2010:WorkflowViewState.IdRef="Sequence_86">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,7 +394,7 @@
                                 </ui:Target>
                               </ui:TypeInto.Target>
                             </ui:TypeInto>
-                            <TryCatch DisplayName="Try Catch team" sap:VirtualizedContainerService.HintSize="2355.2,3176" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                            <TryCatch DisplayName="Try Catch team" sap:VirtualizedContainerService.HintSize="2355.2,3276" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                               <TryCatch.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="teamNotExists" />
                               </TryCatch.Variables>
@@ -434,7 +433,7 @@
                                 </Catch>
                               </TryCatch.Catches>
                               <TryCatch.Finally>
-                                <If Condition="[teamNotExists]" sap:VirtualizedContainerService.HintSize="2318.4,2944.8" sap2010:WorkflowViewState.IdRef="If_35">
+                                <If Condition="[teamNotExists]" sap:VirtualizedContainerService.HintSize="2318.4,3044.8" sap2010:WorkflowViewState.IdRef="If_35">
                                   <If.Then>
                                     <Sequence DisplayName="Sequence team doesn't exists." sap:VirtualizedContainerService.HintSize="375.2,474.4" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -476,7 +475,7 @@
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence DisplayName="Sequence check team match" sap:VirtualizedContainerService.HintSize="1899.2,2785.6" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                                    <Sequence DisplayName="Sequence check team match" sap:VirtualizedContainerService.HintSize="1899.2,2885.6" sap2010:WorkflowViewState.IdRef="Sequence_85">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="outputGetText" />
                                         <Variable x:TypeArguments="x:String" Name="matchTeam" />
@@ -510,9 +509,9 @@
                                           <InArgument x:TypeArguments="x:String">[matchTeam.Split("("c)(0).Trim]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <If Condition="[matchTeam.Equals(in_team)]" sap:VirtualizedContainerService.HintSize="1857.6,2445.6" sap2010:WorkflowViewState.IdRef="If_34">
+                                      <If Condition="[matchTeam.Equals(in_team)]" sap:VirtualizedContainerService.HintSize="1857.6,2545.6" sap2010:WorkflowViewState.IdRef="If_34">
                                         <If.Then>
-                                          <Sequence DisplayName="Sequence get data from team" sap:VirtualizedContainerService.HintSize="1438.4,2286.4" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                          <Sequence DisplayName="Sequence get data from team" sap:VirtualizedContainerService.HintSize="1438.4,2386.4" sap2010:WorkflowViewState.IdRef="Sequence_83">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:Double" Name="percentWins" />
                                             </Sequence.Variables>
@@ -569,6 +568,7 @@
                                             </ui:Click>
                                             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1396.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_19" Text="[in_team]" />
                                             <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1396.8,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                            <ui:BuildDataTable DataTable="[ExtractDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1396.8,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;homeTeam&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;homeScore&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;awayScore&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;awayTeam&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;resultStatus&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
                                             <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'DIV' - get results" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='homeTeam' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='DIV' class='event__participant event__participant--home' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='homeScore' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' class='event__score event__score--home' /&gt;&lt;/column&gt;&lt;column exact='1' name='awayScore' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' class='event__score event__score--away' /&gt;&lt;/column&gt;&lt;column exact='1' name='awayTeam' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='DIV' class='event__participant event__participant--away' idx='1' /&gt;&lt;/column&gt;&lt;extract&gt;&lt;column exact='1' name='resultStatus' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="1396.8,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="[in_n_games]" NextLinkSelector="&lt;webctrl aaname='Mostrar mais jogos' parentid='live-table' tag='A' /&gt;" SimulateClick="True">
                                               <ui:ExtractData.Target>
                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="452241a3-090d-4af1-8105-8757b685cb30" InformativeScreenshot="bc1801c342b089e0edc0ecbd8a91c338" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='live-table' tag='DIV' /&gt;" WaitForReady="COMPLETE">

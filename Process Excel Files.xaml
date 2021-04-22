@@ -14,7 +14,7 @@
     <x:Property Name="in_logPath" Type="InArgument(x:String)" />
     <x:Property Name="in_dataExecution" Type="InArgument(s:DateTime)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1065.6,2808.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1090.4,2702.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -53,7 +53,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -87,21 +87,22 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="759.2,2744" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[in_currentFiles]">
+  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="759.2,2637.6" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[in_currentFiles]">
     <ui:ForEach.Body>
       <ActivityAction x:TypeArguments="x:String">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:String" Name="file" />
         </ActivityAction.Argument>
-        <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="724,2609.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" ReadOnly="True" Visible="False" WorkbookPath="[file]">
+        <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="724,2503.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" ReadOnly="True" Visible="False" WorkbookPath="[file]">
           <ui:ExcelApplicationScope.Body>
             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Sequence read each excel" sap:VirtualizedContainerService.HintSize="690.4,2500" sap2010:WorkflowViewState.IdRef="Sequence_49">
+              <Sequence DisplayName="Sequence read each excel" sap:VirtualizedContainerService.HintSize="690.4,2393.6" sap2010:WorkflowViewState.IdRef="Sequence_49">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="percentWins" />
                   <Variable x:TypeArguments="x:Int32" Name="scoredGoals" />
@@ -121,15 +122,16 @@
                     </InArgument>
                   </ui:ReadRange.Range>
                 </ui:ReadRange>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAuxiliar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="648.8,2279.2" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtAuxiliar]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="648.8,2172.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Sequence write line by line" sap:VirtualizedContainerService.HintSize="615.2,2158.4" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                      <Sequence DisplayName="Sequence write line by line" sap:VirtualizedContainerService.HintSize="615.2,2052" sap2010:WorkflowViewState.IdRef="Sequence_54">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="lineTreated" />
+                          <Variable x:TypeArguments="x:String" Name="exeptionErrorMensage" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -234,18 +236,21 @@
                             <InArgument x:TypeArguments="s:DateTime" x:Key="in_dataExecution">
                               <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="in_dataExecution" />
                             </InArgument>
+                            <OutArgument x:TypeArguments="x:String" x:Key="out_errorMensage">
+                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="exeptionErrorMensage" />
+                            </OutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <If Condition="[errorMensage.Equals(&quot;-&quot;)]" sap:VirtualizedContainerService.HintSize="573.6,840" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[errorMensage.Equals(&quot;-&quot;)]" sap:VirtualizedContainerService.HintSize="573.6,733.6" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="538.4,660.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                            <Sequence sap:VirtualizedContainerService.HintSize="538.4,554.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:AppendLine DisplayName="Append Line" FileName="[in_logPath]" sap:VirtualizedContainerService.HintSize="496.8,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[&quot;Process sucessfully . [&quot;+ in_dataExecution.ToString(&quot;dd-MMM-yyyy HH:mm:ss&quot;)+&quot;]&quot;]" UseDefaultEncoding="False" />
-                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[io_sportType.ToLower]" sap:VirtualizedContainerService.HintSize="496.8,293.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[io_sportType.ToLower]" sap:VirtualizedContainerService.HintSize="496.8,187.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                                 <ui:AddDataRow DataRow="{x:Null}" x:Key="futebol" ArrayRow="[{io_sportType, io_teamSearch, io_nGames, percentWins, scoredGoals, sufferedGoals}]" DataTable="[io_dt_futebol]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
                                 <ui:AddDataRow DataRow="{x:Null}" x:Key="basquetebol" ArrayRow="[{io_sportType, io_teamSearch, io_nGames, percentWins, scoredGoals, sufferedGoals}]" DataTable="[io_dt_basquetebol]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_8" />
                                 <ui:AddDataRow DataRow="{x:Null}" x:Key="hóquei" ArrayRow="[{io_sportType, io_teamSearch, io_nGames, percentWins, scoredGoals, sufferedGoals}]" DataTable="[io_dt_hoquei]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_9" />
